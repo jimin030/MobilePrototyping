@@ -3,9 +3,9 @@
 </head>
 <body>
 	<div id='dust'></div>
-	//<div id='dust10'></div>
-	//<div id='dust2_5'></div>
-	//<div id='dust1_0'></div>
+	<div id='dust10'></div>
+	<div id='dust2_5'></div>
+	<div id='dust1_0'></div>
 	<div id='temp'></div>
 	<div id='humidity'></div>
 	<div id='sky'></div>
@@ -34,13 +34,13 @@
 		document.getElementById('dust').innerHTML = "현재 미세먼지2.5: " + dataF3
 		*/
 		// 온도
-		const dataG3 = data.feed.entry.find((entry) => entry.title.$t == 'I3').content.$t
+		const dataI3 = data.feed.entry.find((entry) => entry.title.$t == 'I3').content.$t
 		document.getElementById('temp').innerHTML = "현재 온도: " + dataI3
 		// 습도
-		const dataH3 = data.feed.entry.find((entry) => entry.title.$t == 'J3').content.$t
+		const dataJ3 = data.feed.entry.find((entry) => entry.title.$t == 'J3').content.$t
 		document.getElementById('humidity').innerHTML = "현재 습도: " + dataJ3
 		// 하늘상태
-		const dataI3 = data.feed.entry.find((entry) => entry.title.$t == 'K3').content.$t
+		const dataK3 = data.feed.entry.find((entry) => entry.title.$t == 'K3').content.$t
 		var dataK3text
 		
 		if (parseInt(dataK3) == 1) {
@@ -54,13 +54,13 @@
 		}
 		document.getElementById('sky').innerHTML = "현재 하늘 상태: " + dataK3text
 		// 강수량
-		const dataJ3 = data.feed.entry.find((entry) => entry.title.$t == 'L3').content.$t
+		const dataL3 = data.feed.entry.find((entry) => entry.title.$t == 'L3').content.$t
 		document.getElementById('rain').innerHTML = "현재 강수량: " + dataL3
 		// 풍향
-		const dataK3 = data.feed.entry.find((entry) => entry.title.$t == 'M3').content.$t
+		const dataM3 = data.feed.entry.find((entry) => entry.title.$t == 'M3').content.$t
 		document.getElementById('wind1').innerHTML = "현재 풍향: " + dataM3
 		// 풍속
-		const dataL3 = data.feed.entry.find((entry) => entry.title.$t == 'N3').content.$t
+		const dataN3 = data.feed.entry.find((entry) => entry.title.$t == 'N3').content.$t
 		document.getElementById('wind2').innerHTML = "현재 풍속: " + dataN3
 	}
 </script>
