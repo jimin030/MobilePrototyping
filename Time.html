@@ -1,8 +1,25 @@
 <html>
-<meta charset="EUC-KR">
-<title>현재시간 불러오기</title>
- 
-<script language="javascript">
+<head>
+    <style>
+      .buttons {
+        font-size: 100px;
+        font-family: "malgun gothic";
+        position: absolute;
+        text-align: center;
+      }
+     .center {
+       width: 200px;
+       margin: 0 auto;
+       text-align: center;
+     }
+        
+   </style>
+</head>
+
+<body onload="showClock()">
+    <div id="divClock" class="clock"></div>
+</body>
+                                                                                                            <script language="javascript">
     function showClock(){
         var currentDate = new Date();
         var divClock = document.getElementById("divClock");
@@ -15,7 +32,5 @@
         setTimeout(showClock,1000);
     }
 </script>
-<body onload="showClock()">
-    <div id="divClock" class="clock"></div>
-</body>
+
 </html>
