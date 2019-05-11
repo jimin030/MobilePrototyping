@@ -16,25 +16,14 @@
    </style>
 </head>
 
-<body style="margin: 0" onload="showClock()">
+<body style="margin: 0">
     <div style="width: 1125px; height: 2436px;>
-      <div class="center"><div id="divClock" class="clock"></div></div>
+      <a href="Time.html"><div class="buttons" style="width: 500px; height: 300px; top: 100px; left: 200px">현재 시간</div></a>
+      <a href="Location.html"><div class="buttons" style="width: 500px; height: 300px; top: 100px; left: 200px">현재 </div></a>
       <a href="page1.html"><div class="buttons" style="width: 500px; height: 300px; top: 100px; left: 200px">현재 날씨</div></a>
-      <div class="buttons" style="width: 500px; height: 300px; top: 550px; left: 200px">button B</div>
+                                                                                                           
+      
     </div>
   </body>
 
 </html>
-<script language="javascript">
-    function showClock(){
-        var currentDate = new Date();
-        var divClock = document.getElementById("divClock");
-         
-        var msg = "현재 시간 :"+currentDate.getHours()+"시"
-        msg += currentDate.getMinutes()+"분";
-        msg += currentDate.getSeconds()+"초";
-         
-        divClock.innerText = msg;
-        setTimeout(showClock,1000);
-    }
-</script>
